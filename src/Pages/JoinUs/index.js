@@ -18,7 +18,7 @@ const JoinUs = () => {
                     </div>
                 </div>
                 <div className='pl-44 pr-44'>
-                    <div className='flex flex-col gap-4'>
+                    <div className='flex flex-col  gap-4'>
                         <p className='text-2xl text-red-600 p-2'> Positions</p>
                         <p className='text-xl p-2 text-red-700'>Search for current vacancies and apply here.</p>
 
