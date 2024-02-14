@@ -1,18 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import falloxo from '../assest/fillaxo-grey.png'
 import search from '../assest/Search.png'
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import { IconButton } from '@mui/material';
+import { Divider, Drawer, IconButton, List, ListItem, ListItemButton, TextField } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { Close, Menu } from '@mui/icons-material';
 
 
 const Header = () => {
+    const [open, setOpen] = useState(false)
     return (
         <>
-            <div className='flex gap-3 items-center list-none justify-end cursor-pointer'>
+            <div className='lg:flex hidden gap-3 items-center list-none justify-end cursor-pointer'>
                 <li>Career</li>
                 <li>Blog</li>
                 <li>News & Events</li>
@@ -30,38 +32,72 @@ const Header = () => {
                     <IconButton><InstagramIcon /></IconButton>
                 </Link>
             </div>
-            <div className='flex justify-between pl-10 pr-20 items-center text-center '>
-                <div>
-                    <Link to='/'>
-                        <img src={falloxo} alt="" className='h-32' />
-                    </Link>
-                </div>
-                <div className='flex items-center gap-5 list-none text-red-600 text-xl'>
-                    <Link to='/aboutus'>
-                        <li>ABOUT US</li>
-                    </Link>
-                    <div className='cursor-pointer'>
-                        <li className='relative inline-block'>SOLUTIONS</li>
-                        {/* <div className='absolute border-2 bg-slate-300 p-5  hover:block z-10'>
-                            <p>DAIRY</p>
-                            <p>BEVERAGE</p>
-                            <p>LIQUOR</p>
-                        </div> */}
+            <div className='flex justify-between lg:pl-10 pl-3 lg:pr-20 pr-3 items-center text-center'>
+
+                <Link to='/'>
+                    <img src={falloxo} alt="" className='lg:w-auto w-32' />
+                </Link>
+
+                <IconButton className='lg:!hidden' onClick={() => setOpen(true)}><Menu /></IconButton>
+
+                <Drawer className='lg:!hidden' anchor='right' open={open} onClose={() => setOpen(false)}>
+                    <List>
+                        <ListItem className='!flex !justify-between gap-5'>
+                            <TextField size='small' placeholder='Search Something...' /> <IconButton onClick={() => setOpen(false)}><Close /></IconButton>
+                        </ListItem>
+                        <Divider />
+                        <Link to='/aboutus'>
+                            <ListItemButton>ABOUT US</ListItemButton>
+                            <Divider />
+                        </Link>
+                        <ListItemButton>SOLUTIONS</ListItemButton>
+                        <Divider />
+                        <ListItemButton>PRODUCTS</ListItemButton>
+                        <Divider />
+                        <Link to='/service'>
+                            <ListItemButton>SERVICES</ListItemButton>
+                            <Divider />
+                        </Link>
+
+                    </List>
+                </Drawer>
+                <div className='lg:flex hidden items-center *:cursor-pointer gap-5 list-none text-red-600 text-xl'>
+                    <Link to='/aboutus'>ABOUT US</Link>
+                    <div className='flex flex-col relative py-5 group'>
+                        <div className='cursor-pointer'>SOLUTIONS</div>
+                        <ul className='absolute top-16 z-50 p-4 font-semibold *:p-2 !text-xl !text-black border shadow bg-white hidden group-hover:block'>
+                            <li value="DAIRY">DAIRY</li>
+                            <hr />
+                            <li value="BEVERAGE">BEVERAGE</li>
+                            <hr />
+                            <li value="LIQUOR">LIQUOR</li>
+                        </ul>
                     </div>
-                    <Link to='/'>
-                        <li>PRODUCTS</li>
-                    </Link>
-                    <Link to='/service'>
-                        <li>SERVICES</li>
-                    </Link>
-
-
-                    <div className='flex items-center border h-10'>
-                        <input type="search" placeholder='Search' className='p-1' />
+                    <div className='flex flex-col relative py-5 group'>
+                        <div className='cursor-pointer'>PRODUCTS</div>
+                        <ul className='absolute top-16 z-50 p-4 font-semibold !text-xl w-60 *:p-2 !text-black border shadow bg-white hidden group-hover:block'>
+                            <li value="DAIRY">ASEPTIC FILLER</li>
+                            <hr />
+                            <li value="BEVERAGE">200 ML BRICK</li>
+                            <hr />
+                            <li value="LIQUOR">1000 ML BRICK</li>
+                            <hr />
+                            <li value="LIQUOR">ROTARY FILLERS</li>
+                            <hr />
+                            <li value="LIQUOR">PROCESS EQUIPMENT</li>
+                        </ul>
+                    </div>
+                    <div className='flex'>
+                        <Link to='/aboutus'>SERVICES</Link>
+                    </div>
+                    <div className='flex items-center border rounded-md h-10'>
+                        <input type="search" placeholder='Search.....' className='p-1' />
                         <img src={search} alt="" className='h-7 border-collapse  cursor-pointer' />
                     </div>
                 </div>
+
             </div>
+
         </>
 
     )

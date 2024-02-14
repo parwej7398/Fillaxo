@@ -14,7 +14,6 @@ function App() {
               <Route key={index} path={route.path} element={<Layout children={route.element} />} />
             )
           })
-
           }
         </Routes>
       </BrowserRouter>

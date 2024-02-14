@@ -42,28 +42,28 @@ const Liquor = () => {
     ]
     return (
         <div>
-            <div className='flex'>
-                <div className='w-[50%] flex flex-col gap-8 bg-red-600 text-white p-20'>
+            <div className='lg:flex lg:flex-col-reverse'>
+                <div className='lg:w-[50%] flex flex-col gap-8 bg-red-600 text-white p-20'>
                     <p className='underline font-semibold text-lg'>Liquor</p>
                     <p className='text-3xl'>KING OF EVERY CELEBRATION</p>
                 </div>
-                <div className='w-[50%]'>
+                <div className='lg:w-[50%]'>
                     <img src={liquour} alt="" className='h-[20rem] w-full' />
                 </div>
             </div>
-            <div className='flex flex-col gap-5 p-10'>
-                <p className='text-xl'>The production of alcoholic product is based on accurate fermentation which is a natural process in which yeast convert starch and glucose into alcohol.</p>
-                <p className='text-3xl text-red-500 font-semibold'>Perfect alcoholic solutions</p>
-                <p className='text-xl'>A detailed knowledge of liquor product process and filling allow us to offer complete turnkey plant which includes packing in form of glass, pet, aluminum can and carton filling.</p>
-                <p className='text-xl'>Our correct and conceptual approach always helps our customers from greenfield stage to final product, on time. Our engineers work with each customer to customize and optimize their plants to satisfy actual requirement for product and meet internationally excepted hygiene & quality standards.</p>
+            <div className='flex flex-col lg:gap-5 gap-2 p-2 lg:p-10'>
+                <p className='lg:text-xl'>The production of alcoholic product is based on accurate fermentation which is a natural process in which yeast convert starch and glucose into alcohol.</p>
+                <p className='lg:text-3xl text-red-500 font-semibold text-xl'>Perfect alcoholic solutions</p>
+                <p className='lg:text-xl'>A detailed knowledge of liquor product process and filling allow us to offer complete turnkey plant which includes packing in form of glass, pet, aluminum can and carton filling.</p>
+                <p className='lg:text-xl'>Our correct and conceptual approach always helps our customers from greenfield stage to final product, on time. Our engineers work with each customer to customize and optimize their plants to satisfy actual requirement for product and meet internationally excepted hygiene & quality standards.</p>
             </div>
             <div>
 
-                <div className="p-6 sm:py-12 bg-gray-100 text-gray-800">
-                    <div className=" grid grid-col-3 pl-14 md:grid-cols-2 lg:grid-cols-3">
+                <div className="lg:p-6 sm:py-12 bg-gray-100 text-gray-800">
+                    <div className=" grid lg:grid-col-3 lg:pl-14 md:grid-cols-2 lg:grid-cols-3">
                         {products.map((event) => (
                             <div key={''} className="flex flex-col mt-5 w-[25rem] bg-gray-50">
-                                <img alt="" className=" bg-gray-500 w-[25rem]" src={event.image} />
+                                <img alt="" className=" bg-gray-500 lg:w-[25rem]" src={event.image} />
                                 <div className="flex flex-col gap-1 p-5">
                                     <p className="text-xl text-red-500 font-bold">{event.title}</p>
                                     <p>{event.contect}</p>

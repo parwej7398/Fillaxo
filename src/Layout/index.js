@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
         <div className='flex flex-col'>
             <Header />
             {children}
-            <div className='fixed right-5 bottom-5'>
+            <div className='lg:fixed lg:right-5 lg:bottom-5 hidden'>
                 <Link to='https://www.whatsapp.com/download'>
                     <img src={whats} alt="" className='h-20' />
                 </Link>

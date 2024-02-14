@@ -42,24 +42,24 @@ const Dairy = () => {
     ]
     return (
         <div>
-            <div className='flex'>
-                <div className='w-[50%] flex flex-col gap-8 bg-red-600 text-white p-20'>
+            <div className='lg:flex'>
+                <div className='lg:w-[50%] flex flex-col gap-8 bg-red-600 text-white p-20'>
                     <p className='underline font-semibold text-lg'>Dairy</p>
                     <p className='text-3xl'>SCADA - BASED DAIRY PLANT SET-UP</p>
                 </div>
-                <div className='w-[50%]'>
+                <div className='lg:w-[50%]'>
                     <img src={dairy} alt="" className='h-[20rem] w-full' />
                 </div>
             </div>
-            <div className='flex flex-col gap-5 p-10'>
-                <p className='text-xl'>Milk and milk by products are world most versatile foods. World population growing rapidly accordingly dairy products demand rising through the globe to meet increased demand companies need to adopt innovative and unique solutions in processing and filling to be sustain in continuously growing market.</p>
-                <p className='text-3xl text-red-500 font-semibold'>Expertise on global scale</p>
-                <p className='text-xl'>We conceptualize, design, supply, install and commission SCADA based centralize controlled fully automatic plants which also include most of dairy products. Fillaxo dairy processing, filling and packaging technological solution is designed to meet food safety standards, proper hygiene, sustainable and energy efficient.</p>
+            <div className='flex flex-col gap-5 lg:p-10 p-5'>
+                <p className='lg:text-xl'>Milk and milk by products are world most versatile foods. World population growing rapidly accordingly dairy products demand rising through the globe to meet increased demand companies need to adopt innovative and unique solutions in processing and filling to be sustain in continuously growing market.</p>
+                <p className='lg:text-3xl text-red-500 font-semibold'>Expertise on global scale</p>
+                <p className='lg:text-xl'>We conceptualize, design, supply, install and commission SCADA based centralize controlled fully automatic plants which also include most of dairy products. Fillaxo dairy processing, filling and packaging technological solution is designed to meet food safety standards, proper hygiene, sustainable and energy efficient.</p>
             </div>
             <div>
 
                 <div className="p-6 sm:py-12 bg-gray-100 text-gray-800">
-                    <div className=" grid grid-col-3 pl-14 md:grid-cols-2 lg:grid-cols-3">
+                    <div className=" grid lg:pl-14 md:grid-cols-2 lg:grid-cols-3">
                         {products.map((event) => (
                             <div key={''} className="flex flex-col mt-5 w-[25rem] bg-gray-50">
                                 <img alt="" className=" bg-gray-500 w-[25rem]" src={event.image} />

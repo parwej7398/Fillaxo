@@ -42,24 +42,24 @@ const Beverage = () => {
     ]
     return (
         <div>
-            <div className='flex'>
-                <div className='w-[50%] flex flex-col gap-8 bg-red-600 text-white p-20'>
+            <div className='lg:flex'>
+                <div className='lg:w-[50%] lg:flex lg:flex-col gap-8 bg-red-600 text-white p-20'>
                     <p className='underline font-semibold text-lg'>Beverage</p>
                     <p className='text-3xl'>A TRUE HACK FOR AMAZING TASTE</p>
                 </div>
-                <div className='w-[50%]'>
-                    <img src={Beverages} alt="" className='h-[20rem] w-full' />
+                <div className='lg:w-[50%]'>
+                    <img src={Beverages} alt="" className='lg:h-[20rem] w-full' />
                 </div>
             </div>
-            <div className='flex flex-col gap-5 p-10'>
-                <p className='text-xl'>Beverage processing companies are facing numerous challenges which are cost of raw materials, ingredients, correct taste profile and break down. Apart from this delivering premium quality low priced drink to demanding consumers is a biggest challenge.</p>
-                <p className='text-3xl text-red-500 font-semibold'>Complete turnkey projects</p>
-                <p className='text-xl'>Filllaxo machinery and equipments comply with international quality and hygiene standards. But we not only supply equipment, we take care for each step from scratch to commissioning. Our equipment and fillers can help you to reduce operating and maintenance cost. Our innovative and unique upgraded technologies also help to safe guard the environment through minimization of water, emission and energy use. Talk to our Fillaxo adviser to decide correct technology for your product.</p>
+            <div className='lg:flex lg:flex-col lg:gap-5 lg:p-10 p-2'>
+                <p className='lg:text-xl'>Beverage processing companies are facing numerous challenges which are cost of raw materials, ingredients, correct taste profile and break down. Apart from this delivering premium quality low priced drink to demanding consumers is a biggest challenge.</p>
+                <p className='lg:text-3xl text-xl text-red-500 font-semibold'>Complete turnkey projects</p>
+                <p className='lg:text-xl'>Filllaxo machinery and equipments comply with international quality and hygiene standards. But we not only supply equipment, we take care for each step from scratch to commissioning. Our equipment and fillers can help you to reduce operating and maintenance cost. Our innovative and unique upgraded technologies also help to safe guard the environment through minimization of water, emission and energy use. Talk to our Fillaxo adviser to decide correct technology for your product.</p>
             </div>
             <div>
 
                 <div className="p-6 sm:py-12 bg-gray-100 text-gray-800">
-                    <div className=" grid grid-col-3 pl-14 md:grid-cols-2 lg:grid-cols-3">
+                    <div className=" grid lg:grid-col-3  lg:pl-14 md:grid-cols-2 lg:grid-cols-3">
                         {products.map((event) => (
                             <div key={''} className="flex flex-col mt-5 w-[25rem] bg-gray-50">
                                 <img alt="" className=" bg-gray-500 w-[25rem]" src={event.image} />
