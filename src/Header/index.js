@@ -6,12 +6,15 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { Divider, Drawer, IconButton, List, ListItem, ListItemButton, TextField } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Close, Menu } from '@mui/icons-material';
+import Solution from '../Solution';
+
 
 
 const Header = () => {
     const [open, setOpen] = useState(false)
+    const navigate = useNavigate()
     return (
         <>
             <div className='lg:flex hidden gap-3 items-center list-none justify-end cursor-pointer'>
@@ -47,15 +50,36 @@ const Header = () => {
                         </ListItem>
                         <Divider />
                         <Link to='/aboutus'>
-                            <ListItemButton>ABOUT US</ListItemButton>
+                            <ListItemButton>About us</ListItemButton>
                             <Divider />
                         </Link>
-                        <ListItemButton>SOLUTIONS</ListItemButton>
+                        <ListItemButton>Solutions</ListItemButton>
                         <Divider />
-                        <ListItemButton>PRODUCTS</ListItemButton>
+                        {/* <div>
+                            <Solution />
+                            <Divider />
+                        </div> */}
+                        <ListItemButton>Products</ListItemButton>
                         <Divider />
+
                         <Link to='/service'>
-                            <ListItemButton>SERVICES</ListItemButton>
+                            <ListItemButton>Services</ListItemButton>
+                            <Divider />
+                        </Link>
+                        <Link>
+                            <ListItemButton>Career</ListItemButton>
+                            <Divider />
+                        </Link>
+                        <Link>
+                            <ListItemButton>Blog</ListItemButton>
+                            <Divider />
+                        </Link>
+                        <Link>
+                            <ListItemButton>News & Events</ListItemButton>
+                            <Divider />
+                        </Link>
+                        <Link>
+                            <ListItemButton>Contact</ListItemButton>
                             <Divider />
                         </Link>
 
@@ -66,29 +90,29 @@ const Header = () => {
                     <div className='flex flex-col relative py-5 group'>
                         <div className='cursor-pointer'>SOLUTIONS</div>
                         <ul className='absolute top-16 z-50 p-4 font-semibold *:p-2 !text-xl !text-black border shadow bg-white hidden group-hover:block'>
-                            <li value="DAIRY">DAIRY</li>
+                            <button value="DAIRY" onClick={() => navigate('/dairy')}>DAIRY</button>
                             <hr />
-                            <li value="BEVERAGE">BEVERAGE</li>
+                            <button value="BEVERAGE" onClick={() => navigate('/beverage')}>BEVERAGE</button>
                             <hr />
-                            <li value="LIQUOR">LIQUOR</li>
+                            <button value="LIQUOR" onClick={() => navigate('/liquor')}>LIQUOR</button>
                         </ul>
                     </div>
                     <div className='flex flex-col relative py-5 group'>
                         <div className='cursor-pointer'>PRODUCTS</div>
-                        <ul className='absolute top-16 z-50 p-4 font-semibold !text-xl w-60 *:p-2 !text-black border shadow bg-white hidden group-hover:block'>
-                            <li value="DAIRY">ASEPTIC FILLER</li>
+                        <div className='absolute top-16 z-50 p-4 font-semibold !text-xl w-60 *:p-2 !text-black border shadow bg-white hidden group-hover:block'>
+                            <button value="DAIRY">ASEPTIC FILLER</button>
                             <hr />
-                            <li value="BEVERAGE">200 ML BRICK</li>
+                            <button value="BEVERAGE" onClick={() => navigate('/aboutknowmore')}>200 ML BRICK</button>
                             <hr />
-                            <li value="LIQUOR">1000 ML BRICK</li>
+                            <button value="LIQUOR" onClick={() => navigate('/ml_brick')}>1000 ML BRICK</button>
                             <hr />
-                            <li value="LIQUOR">ROTARY FILLERS</li>
+                            <button value="LIQUOR" onClick={() => navigate('/process_equipment')}>ROTARY FILLERS</button>
                             <hr />
-                            <li value="LIQUOR">PROCESS EQUIPMENT</li>
-                        </ul>
+                            <button value="LIQUOR" onClick={() => navigate('/rotary')}>PROCESS EQUIPMENT</button>
+                        </div>
                     </div>
                     <div className='flex'>
-                        <Link to='/aboutus'>SERVICES</Link>
+                        <Link to='/service'>SERVICES</Link>
                     </div>
                     <div className='flex items-center border rounded-md h-10'>
                         <input type="search" placeholder='Search.....' className='p-1' />

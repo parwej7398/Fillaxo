@@ -42,7 +42,7 @@ const Liquor = () => {
     ]
     return (
         <div>
-            <div className='lg:flex lg:flex-col-reverse'>
+            <div className='lg:flex lg:flex-reverse'>
                 <div className='lg:w-[50%] flex flex-col gap-8 bg-red-600 text-white p-20'>
                     <p className='underline font-semibold text-lg'>Liquor</p>
                     <p className='text-3xl'>KING OF EVERY CELEBRATION</p>

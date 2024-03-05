@@ -9,6 +9,10 @@ import Beverage from "../Pages/Beverage";
 import Dairy from "../Pages/Dairy";
 import JoinUs from "../Pages/JoinUs";
 import Liquor from "../Pages/Liquor";
+import ML_Brick_1000 from "../Pages2/MlBrick1000";
+import ProcessEquipment from "../Pages2/ProcessEquipment";
+import Rotary from "../Pages2/RotaryFillers";
+import Solution from "../Solution";
 
 export const routes = [
     {
@@ -42,28 +46,48 @@ export const routes = [
         element: <KnowMore />,
     },
     {
-        id: 6,
+        id: 7,
         path: "/aboutknowmore",
         element: <AboutKnowMore />,
     },
     {
-        id: 6,
+        id: 8,
         path: "/joinus",
         element: <JoinUs />,
     },
     {
-        id: 6,
+        id: 9,
         path: "/beverage",
         element: <Beverage />,
     },
     {
-        id: 6,
+        id: 10,
         path: "/liquor",
         element: <Liquor />,
     },
     {
-        id: 6,
+        id: 11,
         path: "/dairy",
         element: <Dairy />,
+    },
+    {
+        id: 12,
+        path: "/ml_brick",
+        element: <ML_Brick_1000 />,
+    },
+    {
+        id: 12,
+        path: "/process_equipment",
+        element: <ProcessEquipment />,
+    },
+    {
+        id: 12,
+        path: "/rotary",
+        element: <Rotary />,
+    },
+    {
+        id: 12,
+        path: "/solution",
+        element: <Solution />,
     },
 ]

@@ -78,9 +78,9 @@ const Service = () => {
                 </div>
                 <div className='lg:w-[50%]'><img src={productformulla} alt="" /></div>
             </div>
-            <div className='lg:flex lg:justify-center lg:pt-10'>
+            <div className='lg:flex-row-reverse flex flex-col gap-3 p-2 lg:justify-center lg:pt-10'>
                 <div className='lg:w-[50%]'><img src={productsuport} alt="" /></div>
-                <div className='lg:flex lg:flex-col lg:p-10 lg:gap-8 lg:w-[50%] flex flex-col gap-3'>
+                <div className='lg:flex lg:flex-col lg:p-10 lg:gap-8 lg:w-[50%]'>
                     <p className='font-sans text-red-600 text-2xl font-semibold'>Production support</p>
                     <p className='text-lg'>Fillaxo always considers high quality brought out items for its machinery. A wide range of original spare parts are always immediate ready to dispatch to our customer just on call or email.</p>
                     <p className='text-lg'>Our specialization not just limited to any particular area we are serving throughout the world and providing wide range of spare parts and services at doorstep.</p>
