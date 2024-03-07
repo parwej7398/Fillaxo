@@ -26,7 +26,7 @@ const NavBar = () => {
                     <div className='lg:flex lg:flex-col lg:gap-2 cursor-pointer'>
                         <li>Career</li>
                         <li>Blog</li>
-                        <li>Nexe & Evenys</li>
+                        <li>News & Events</li>
                         <li>Contact</li>
                     </div>
                     <div className='lg:flex lg:flex-col gap-4 font-bold'>

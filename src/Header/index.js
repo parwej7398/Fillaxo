@@ -8,7 +8,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import { Divider, Drawer, IconButton, List, ListItem, ListItemButton, TextField } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import { Close, Menu } from '@mui/icons-material';
-import Solution from '../Solution';
+
 
 
 
@@ -17,22 +17,22 @@ const Header = () => {
     const navigate = useNavigate()
     return (
         <>
-            <div className='lg:flex hidden gap-3 items-center list-none justify-end cursor-pointer'>
+            <div className='lg:flex hidden gap-3 pr-10 items-center list-none justify-end cursor-pointer'>
                 <li>Career</li>
                 <li>Blog</li>
                 <li>News & Events</li>
                 <li>Contact</li>
                 <Link to='https://www.facebook.com/fillaxo'>
-                    <IconButton><FacebookIcon /></IconButton>
+                    <IconButton><FacebookIcon className='!size-6' /></IconButton>
                 </Link>
                 <Link to='https://twitter.com/'>
-                    <IconButton><TwitterIcon /></IconButton>
+                    <IconButton><TwitterIcon className='!size-6' /></IconButton>
                 </Link>
                 <Link to='https://www.linkedin.com/company/fillaxo'>
-                    <IconButton><LinkedInIcon /></IconButton>
+                    <IconButton><LinkedInIcon className='!size-6' /></IconButton>
                 </Link>
                 <Link to='https://www.instagram.com/fillaxo/'>
-                    <IconButton><InstagramIcon /></IconButton>
+                    <IconButton><InstagramIcon className='!size-6' /></IconButton>
                 </Link>
             </div>
             <div className='flex justify-between lg:pl-10 pl-3 lg:pr-20 pr-3 items-center text-center'>
@@ -89,25 +89,25 @@ const Header = () => {
                     <Link to='/aboutus'>ABOUT US</Link>
                     <div className='flex flex-col relative py-5 group'>
                         <div className='cursor-pointer'>SOLUTIONS</div>
-                        <ul className='absolute top-16 z-50 p-4 font-semibold *:p-2 !text-xl !text-black border shadow bg-white hidden group-hover:block'>
+                        <ul className='absolute top-16 z-50 p-4 *:p-2 !text-xl !text-black border shadow bg-gray-300 hidden group-hover:block'>
                             <button value="DAIRY" onClick={() => navigate('/dairy')}>DAIRY</button>
-                            <hr />
+
                             <button value="BEVERAGE" onClick={() => navigate('/beverage')}>BEVERAGE</button>
-                            <hr />
+
                             <button value="LIQUOR" onClick={() => navigate('/liquor')}>LIQUOR</button>
                         </ul>
                     </div>
                     <div className='flex flex-col relative py-5 group'>
                         <div className='cursor-pointer'>PRODUCTS</div>
-                        <div className='absolute top-16 z-50 p-4 font-semibold !text-xl w-60 *:p-2 !text-black border shadow bg-white hidden group-hover:block'>
+                        <div className='absolute top-16 z-50 p-4 !text-xl w-60 *:p-2 !text-black border shadow bg-gray-300 hidden group-hover:block'>
                             <button value="DAIRY">ASEPTIC FILLER</button>
-                            <hr />
+
                             <button value="BEVERAGE" onClick={() => navigate('/aboutknowmore')}>200 ML BRICK</button>
-                            <hr />
+
                             <button value="LIQUOR" onClick={() => navigate('/ml_brick')}>1000 ML BRICK</button>
-                            <hr />
+
                             <button value="LIQUOR" onClick={() => navigate('/process_equipment')}>ROTARY FILLERS</button>
-                            <hr />
+
                             <button value="LIQUOR" onClick={() => navigate('/rotary')}>PROCESS EQUIPMENT</button>
                         </div>
                     </div>
