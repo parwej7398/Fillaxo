@@ -11,8 +11,8 @@ import { Link } from "react-router-dom";
 const Rotary = () => {
   return (
     <div>
-      <div className="lg:flex  ">
-        <div className="lg:w-[50%] flex flex-col lg:px-[12%] lg:gap-8 bg-[#c71035] text-white lg:p-20 p-16">
+      <div className="lg:flex  max-sm:flex max-sm:flex-col-reverse">
+        <div className="lg:w-[50%] flex flex-col lg:p-20  lg:gap-8 bg-[#c71035] p-10 text-white">
           <p className="underline text-xl">Rotary Fillers</p>
           <p className="lg:text-5xl text-2xl">
             FOR PET, GLASS <br /> AND CAN FILLING
@@ -46,7 +46,7 @@ const Rotary = () => {
         </div>
       </div>
       <div className="flex flex-col gap-2 *:text-lg *:font-semibold p-5 px-[12%]">
-        <li>The strong points of the Fillaxo Rotary fillers:</li>
+        <p>The strong points of the Fillaxo Rotary fillers:</p>
         <li>Hygiene design</li>
         <li>High performance</li>
         <li>Easy machine access</li>
@@ -55,12 +55,12 @@ const Rotary = () => {
         <li>Reliability due to simplicity</li>
         <li>Filler type: Glass, PET bottles & Cans</li>
       </div>
-      <div className="lg:flex lg:gap-10 lg:p-10 lg:justify-between lg:items-center lg:px-[12%] p-5">
+      <div className="lg:flex lg:gap-10 lg:p-10 lg:justify-between lg:px-[12%] p-5">
         <div className="lg:w-[50%]  flex flex-col gap-6">
           <p className="text-red-600 text-2xl font-bold">
             CARBONATION AND MIXING OF BEVERAGES
           </p>
-          <p className=" lg:text-xl font-bold">
+          <p className=" lg:text-lg ">
             Carbonation of soft drinks, energy drinks, juices, water, and beer
             occurs extremely gently with our carbonation modules. Carbonization
             and mixing in one skid-mounted module for beer & energy drink
@@ -74,10 +74,10 @@ const Rotary = () => {
       <div className="lg:flex justify-center gap-8 ">
         <div className="lg:flex lg:flex-col lg:gap-5 p-4 lg:w-[26%]">
           <div>
-            <img src={glass} alt="" />
+            <img src={pet} alt="" />
           </div>
           <div className="flex flex-col gap-3">
-            <p className="text-red-600 text-3xl font-bold">GLASS FILLER</p>
+            <p className="text-red-600 text-2xl font-semibold">GLASS FILLER</p>
             <p className="text-xl">
               Over low glass breakage filler during filling with the starting
               capacity of 40 BPM. Automation level PLC.
@@ -86,10 +86,10 @@ const Rotary = () => {
         </div>
         <div className="lg:flex lg:flex-col lg:gap-5 p-4 lg:w-[26%]">
           <div>
-            <img src={pet} alt="" />
+            <img src={glass} alt="" />
           </div>
           <div className="flex flex-col gap-3">
-            <p className="text-red-600 text-3xl font-bold">PET FILLER</p>
+            <p className="text-red-600 text-2xl font-semibold">PET FILLER</p>
             <p className="text-xl">
               Comes with variety of options in cap size, starting capacity is 60
               BPM. Automation level PLC.
@@ -101,7 +101,7 @@ const Rotary = () => {
             <img src={can} alt="" />
           </div>
           <div className="flex flex-col gap-3">
-            <p className="text-red-600 text-3xl font-bold">CAN FILLER</p>
+            <p className="text-red-600 text-2xl font-semibold">CAN FILLER</p>
             <p className="text-xl">
               Suitable for carbonated and non-carbonated products with Proven
               can seamer, starting capacity 60 CPM.
@@ -109,10 +109,10 @@ const Rotary = () => {
           </div>
         </div>
       </div>
-      <div className="lg:flex items-center p-20 gap-5 px-[12%]">
+      <div className="flex items-center lg:p-20 gap-5 p-8">
         <p className="text-lg">Do you want know more?</p>
         <Link to="/contactus">
-          <button className="border h-11 w-40 bg-red-700 text-white rounded-md font-bold">
+          <button className="border h-11 p-2  bg-red-700 text-white rounded-md lg:font-bold">
             → CONTACT US!
           </button>
         </Link>

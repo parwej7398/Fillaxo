@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import falloxo from "../assest/fillaxo-grey.a0a349d4eda46249c900-removebg-preview.png";
-import search from "../assest/Search.png";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
@@ -23,6 +22,7 @@ import { Close, Menu, Search } from "@mui/icons-material";
 const Header = () => {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
+
   return (
     <>
       <div className="lg:flex lg:text-sm lg:font-semibold  hidden gap-4 pr-10 items-center list-none justify-end cursor-pointer">
@@ -85,7 +85,7 @@ const Header = () => {
               </IconButton>
             </ListItem>
             <Divider />
-            <Link to="/aboutus">
+            <Link to="/aboutus" onClick={() => setOpen(false)}>
               <ListItemButton>About Us</ListItemButton>
               <Divider />
             </Link>
@@ -95,9 +95,21 @@ const Header = () => {
               </AccordionSummary>
               <AccordionDetails>
                 <span className="flex flex-col gap-4">
-                  <p className="text-cyan-800">DAIRY</p>
-                  <p className="text-cyan-800">BEVERAGE</p>
-                  <p className="text-cyan-800">LIQUOR</p>
+                  <Link to="/dairy">
+                    <p className="text-cyan-800" onClick={() => setOpen(false)}>
+                      DAIRY
+                    </p>
+                  </Link>
+                  <Link to="/beverage">
+                    <p className="text-cyan-800" onClick={() => setOpen(false)}>
+                      BEVERAGE
+                    </p>
+                  </Link>
+                  <Link to="/liquor">
+                    <p className="text-cyan-800" onClick={() => setOpen(false)}>
+                      LIQUOR
+                    </p>
+                  </Link>
                 </span>
               </AccordionDetails>
             </Accordion>
@@ -108,32 +120,53 @@ const Header = () => {
               </AccordionSummary>
               <AccordionDetails className="!outline-none">
                 <span className="flex flex-col gap-4">
-                  <p className="text-cyan-800"> 200 ML BRICK</p>
-                  <p className="text-cyan-800">1000 ML BRICK</p>
-                  <p className="text-cyan-800">ROTARY FILLERS</p>
-                  <p className="text-cyan-800">PROCESS EQUIPMENT</p>
+                  <Link to="/ml_brick_200">
+                    <p className="text-cyan-800" onClick={() => setOpen(false)}>
+                      {" "}
+                      200 ML BRICK
+                    </p>
+                  </Link>
+                  <Link to="/ml_brick_1000">
+                    <p className="text-cyan-800" onClick={() => setOpen(false)}>
+                      1000 ML BRICK
+                    </p>
+                  </Link>
+                  <Link to="/rotary">
+                    <p className="text-cyan-800" onClick={() => setOpen(false)}>
+                      ROTARY FILLERS
+                    </p>
+                  </Link>
+                  <Link to="/process_equipment">
+                    <p className="text-cyan-800" onClick={() => setOpen(false)}>
+                      PROCESS EQUIPMENT
+                    </p>
+                  </Link>
                 </span>
               </AccordionDetails>
             </Accordion>
             <Divider />
             <Link to="/service">
-              <ListItemButton>Services</ListItemButton>
+              <ListItemButton onClick={() => setOpen(false)}>
+                Services
+              </ListItemButton>
               <Divider />
             </Link>
-            <Link to={"https://app.fillaxo.com/career/"}>
+            <Link to="https://app.fillaxo.com/career/">
               <ListItemButton>Career</ListItemButton>
               <Divider />
             </Link>
-            <Link to={"https://app.fillaxo.com/blog/"}>
+            <Link to="https://app.fillaxo.com/blog/">
               <ListItemButton>Blog</ListItemButton>
               <Divider />
             </Link>
-            <Link to={"https://app.fillaxo.com/news/"}>
+            <Link to="https://app.fillaxo.com/news/">
               <ListItemButton>News & Events</ListItemButton>
               <Divider />
             </Link>
-            <Link to={"/contactus"}>
-              <ListItemButton>Contact</ListItemButton>
+            <Link to="/contactus">
+              <ListItemButton onClick={() => setOpen(false)}>
+                Contact
+              </ListItemButton>
               <Divider />
             </Link>
           </List>
@@ -205,11 +238,6 @@ const Header = () => {
             <IconButton>
               <Search />
             </IconButton>
-            {/* <img
-              src={search}
-              alt=""
-              className="h-7 border-collapse  cursor-pointer"
-            /> */}
           </div>
         </div>
       </div>

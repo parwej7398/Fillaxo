@@ -85,7 +85,7 @@ const FrontPage = () => {
             range including aseptic carton packing filling machines & process
             turnkey solutions to beverage, dairy, food & liquor industries.
           </p>
-          <Link to="/aboutknowmore">
+          <Link to="/ml_brick_200">
             <button className="text-left text-red-700 font-bold">
               KNOW MORE
             </button>
